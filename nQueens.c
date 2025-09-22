@@ -74,6 +74,12 @@ int main(int argc, char **argv) {
         printf("Please! Use: %s size_of_queens\n", argv[0]);
         return 1;
     }
+    clock_t inicio = clock();
     SolveProblem(N);
+    clock_t fim = clock();
+    double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+    printf("Tempo SolveProblem = %.3f segundos\n", tempo);
     return 0;
 }
+
+
